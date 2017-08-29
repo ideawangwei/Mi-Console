@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by xiezg@317hu.com on 2017/8/29 0029.
  * 用户实体类
  */
-public class UserEntity implements Serializable {
+public class UserEntity extends BaseEntity {
     private String id;
     private String userName;
     private String passWord;

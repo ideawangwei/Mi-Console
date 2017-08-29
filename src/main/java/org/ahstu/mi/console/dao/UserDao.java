@@ -5,7 +5,7 @@ import org.ahstu.mi.console.entity.UserEntity;
 /**
  * Created by xiezg@317hu.com on 2017/8/29 0029.
  */
-public interface UserDao {
+public interface UserDao extends BaseDao{
 
     /**
      * @param userEntity
