@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8">
     <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="helloworld.js"></script>
+    <style>.active { color: red; font-weight: bold; }</style>
 </head>
-<body>
+<body ng-app="helloworld">
+<a ui-sref="hello" ui-sref-active="active">Hello</a>
+<a ui-sref="about" ui-sref-active="active">About</a>
 
-<div ng-app="">
-    <p>名字 : <input type="text" ng-model="name"></p>
-    <h1>Hello {{name}}</h1>
-</div>
-
+<ui-view></ui-view>
 </body>
 </html>
