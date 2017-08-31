@@ -75,6 +75,11 @@ public class UserEntity extends BaseEntity {
      */
     private Boolean accountStatus;
 
+    /**
+     * 职位
+     */
+    private String job;
+
 
     public String getId() {
         return id;
@@ -178,6 +183,14 @@ public class UserEntity extends BaseEntity {
 
     public void setAccountStatus(Boolean accountStatus) {
         this.accountStatus = accountStatus;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
     }
 
     @Override
