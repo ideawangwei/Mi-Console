@@ -1,6 +1,5 @@
 package org.ahstu.mi.console.entity;
 
-import java.io.Serializable;
 
 /**
  * Created by xiezg@317hu.com on 2017/8/29 0029.
@@ -8,7 +7,25 @@ import java.io.Serializable;
  */
 public class UserEntity extends BaseEntity {
     private String id;
-    private String userName;
+
+    /**
+     * 用户英文名称
+     */
+    private String enName;
+
+    /**
+     * 用户中文名称
+     */
+    private String cnName;
+
+    /**
+     * 性别
+     */
+    private String sex;
+
+    /**
+     * 用户登录密码
+     */
     private String passWord;
 
     public String getId() {
@@ -19,12 +36,12 @@ public class UserEntity extends BaseEntity {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getCnName() {
+        return cnName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCnName(String cnName) {
+        this.cnName = cnName;
     }
 
     public String getPassWord() {
@@ -33,5 +50,21 @@ public class UserEntity extends BaseEntity {
 
     public void setPassWord(String passWord) {
         this.passWord = passWord;
+    }
+
+    public String getEnName() {
+        return enName;
+    }
+
+    public void setEnName(String enName) {
+        this.enName = enName;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }
