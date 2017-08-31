@@ -1,11 +1,18 @@
 package org.ahstu.mi.console.entity;
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 /**
  * Created by xiezg@317hu.com on 2017/8/29 0029.
  * 用户实体类
  */
 public class UserEntity extends BaseEntity {
+
+    /**
+     * 用户编号
+     */
     private String id;
 
     /**
@@ -19,14 +26,55 @@ public class UserEntity extends BaseEntity {
     private String cnName;
 
     /**
+     * 用户登录密码
+     */
+    private String passWord;
+
+    /**
      * 性别
      */
     private String sex;
 
     /**
-     * 用户登录密码
+     * 出生日期
      */
-    private String passWord;
+    private String birthday;
+
+    /**
+     * 身份证号
+     */
+    private String idCard;
+
+    /**
+     * 手机号
+     */
+    private String cellPhone;
+
+    /**
+     * QQ号
+     */
+    private String qq;
+
+    /**
+     * 邮箱
+     */
+    private String email;
+
+    /**
+     * 入职日期
+     */
+    private String hireDate;
+
+    /**
+     * 离职日期
+     */
+    private String leaveDate;
+
+    /**
+     * 账号状态
+     */
+    private Boolean accountStatus;
+
 
     public String getId() {
         return id;
@@ -66,5 +114,75 @@ public class UserEntity extends BaseEntity {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getIdCard() {
+        return idCard;
+    }
+
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
+    }
+
+    public String getCellPhone() {
+        return cellPhone;
+    }
+
+    public void setCellPhone(String cellPhone) {
+        this.cellPhone = cellPhone;
+    }
+
+    public String getQq() {
+        return qq;
+    }
+
+    public void setQq(String qq) {
+        this.qq = qq;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(String hireDate) {
+        this.hireDate = hireDate;
+    }
+
+    public String getLeaveDate() {
+        return leaveDate;
+    }
+
+    public void setLeaveDate(String leaveDate) {
+        this.leaveDate = leaveDate;
+    }
+
+    public Boolean getAccountStatus() {
+        return accountStatus;
+    }
+
+    public void setAccountStatus(Boolean accountStatus) {
+        this.accountStatus = accountStatus;
+    }
+
+    @Override
+    public String toString() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        return gson.toJson(this);
     }
 }
